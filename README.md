@@ -1,5 +1,7 @@
 # android tablayout 
 有不足之地，欢迎指点！
+
+
 可以设置图片，图片的位置 left/top/right/bottom
 图片和文字的选择器，是否显示图片等功能，具体使用方法如下：
 
@@ -24,6 +26,32 @@
         tl:tl_textSelectColor="@color/color_f39800"
         tl:tl_textUnSelectColor="@color/color_545454"
         tl:tl_textsize="12sp"/>
+        
+        
+   在页面中设置，可以关联viewpager
+  ArrayList<TabEntity> list = new ArrayList<>();
+        for (int i = 0; i < TITLE.length; i++) {
+            TabEntity tabEntity = new TabEntity();
+            tabEntity.tabTitle = TITLE[i];
+            tabEntity.selectedIcon = mIconSelectIds[i];
+            tabEntity.unSelectedIcon = mIconUnselectIds[i];
+            list.add(tabEntity);
+        }
+        tablayout.setTabData(list);
+        tablayout.setOnSelectorListener(new CommonTabLayout.OnSelectorListener() {
+            @Override
+            public void onSeletor(int position) {
+//                viewPager.setCurrentItem(position);
+            }
+        });
+
+        ArrayList<BaseFragment> fragments = new ArrayList<>();
+        fragments.add(BaseFragment.newInstance(this, OneFragment.class));
+        fragments.add(BaseFragment.newInstance(this, TwoFragment.class));
+        fragments.add(BaseFragment.newInstance(this, NewsFragment.class));
+        fragments.add(BaseFragment.newInstance(this, FourFragment.class));
+        viewPager.setAdapter(new MainPagerAdapter(getFragmentManager(), fragments));
+        tablayout.setUpWithViewPager(viewPager);
         
  自定义属性
       <attr name="tl_textsize" format="dimension"/>
