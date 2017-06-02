@@ -469,6 +469,12 @@ public class CommonTabLayout extends FrameLayout implements ValueAnimator.Animat
                 mAnimPoint.right = mAnimPoint.left + mIndicatorWidth;
                 postInvalidate();
             }
+
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                setCurrentTab(position);
+            }
         });
     }
 
