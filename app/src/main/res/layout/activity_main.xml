@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sample.app.MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/common_tablayout"
+        android:background="@color/color_545454"/>
+
+    <com.tablayoutlibrary.app.CommonTabLayout
+        android:id="@id/common_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        tl:tl_iconGravity="TOP"
+        tl:tl_iconHeight="20dp"
+        tl:tl_iconVisible="true"
+        tl:tl_iconWidth="20dp"
+        tl:tl_indicatorAnimEnable="true"
+        tl:tl_indicatorColor="@color/colorPrimary"
+        tl:tl_indicatorEnable="true"
+        tl:tl_indicatorGravity="INDICATOR_TOP"
+        tl:tl_indicatorMarginBottom="6dp"
+        tl:tl_indicatorMarginTop="6dp"
+        tl:tl_tabPadding="5dp"
+        tl:tl_textSelectColor="@color/color_f39800"
+        tl:tl_textUnSelectColor="@color/color_545454"
+        tl:tl_textsize="12sp"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CommonTabLayout">
+        <attr name="tl_textsize" format="dimension"/>
+        <attr name="tl_textSelectColor" format="reference"/>
+        <attr name="tl_textUnSelectColor" format="reference"/>
+        <attr name="tl_iconVisible" format="boolean"/>
+        <attr name="tl_iconHeight" format="dimension"/>
+        <attr name="tl_iconWidth" format="dimension"/>
+        <attr name="tl_iconMargin" format="dimension"/>
+        <attr name="tl_iconGravity">
+            <enum name="LEFT" value="17"/>
+            <enum name="TOP" value="18"/>
+            <enum name="RIGHT" value="19"/>
+            <enum name="BOTTOM" value="20"/>
+        </attr>
+        <attr name="tl_tabPadding" format="dimension"/>
+        <attr name="tl_padding" format="dimension"/>
+
+        <!-- indicator -->
+        <attr name="tl_indicatorColor" format="color"/>
+        <attr name="tl_indicatorHeight" format="dimension"/>
+        <attr name="tl_indicatorWidth" format="reference"/>
+        <attr name="tl_indicatorMarginLeft" format="reference"/>
+        <attr name="tl_indicatorMarginTop" format="dimension"/>
+        <attr name="tl_indicatorMarginRight" format="dimension"/>
+        <attr name="tl_indicatorMarginBottom" format="dimension"/>
+        <attr name="tl_indicatorGravity">
+            <flag name="INDICATOR_LEFT" value="0x1001"/>
+            <flag name="INDICATOR_TOP" value="0x1002"/>
+            <flag name="INDICATOR_RIGHT" value="0x1003"/>
+            <flag name="INDICATOR_BOTTOM" value="0x1004"/>
+        </attr>
+        <attr name="tl_indicatorEnable" format="boolean"/>
+        <attr name="tl_indicatorAnimEnable" format="boolean"/>
+    </declare-styleable>
+</resources>
