@@ -5,45 +5,46 @@
 可以设置图片，图片的位置 left/top/right/bottom
 图片和文字的选择器，是否显示图片等功能，具体使用方法如下：
 
-<com.tablayoutlibrary.app.CommonTabLayout
-        android:id="@id/common_tablayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        tl:tl_iconGravity="TOP"
-        tl:tl_iconHeight="20dp"
-        tl:tl_iconVisible="true"
-        tl:tl_iconWidth="20dp"
-        tl:tl_indicatorAnimEnable="true"
-        tl:tl_indicatorColor="@color/colorPrimary"
-        tl:tl_indicatorEnable="true"
-        tl:tl_indicatorGravity="INDICATOR_TOP"
-        tl:tl_indicatorMarginBottom="6dp"
-        tl:tl_indicatorMarginTop="6dp"
-        tl:tl_tabPadding="5dp"
-        tl:tl_textSelectColor="@color/color_f39800"
-        tl:tl_textUnSelectColor="@color/color_545454"
-        tl:tl_textsize="12sp"/>
+        <com.tablayoutlibrary.app.CommonTabLayout
+                android:id="@id/common_tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                tl:tl_iconGravity="TOP"
+                tl:tl_iconHeight="20dp"
+                tl:tl_iconVisible="true"
+                tl:tl_iconWidth="20dp"
+                tl:tl_indicatorAnimEnable="true"
+                tl:tl_indicatorColor="@color/colorPrimary"
+                tl:tl_indicatorEnable="true"
+                tl:tl_indicatorGravity="INDICATOR_TOP"
+                tl:tl_indicatorMarginBottom="6dp"
+                tl:tl_indicatorMarginTop="6dp"
+                tl:tl_tabPadding="5dp"
+                tl:tl_textSelectColor="@color/color_f39800"
+                tl:tl_textUnSelectColor="@color/color_545454"
+                tl:tl_textsize="12sp"/>
         
         
    在页面中设置，可以关联viewpager
-  ArrayList<TabEntity> list = new ArrayList<>();
-        for (int i = 0; i < TITLE.length; i++) {
-            TabEntity tabEntity = new TabEntity();
-            tabEntity.tabTitle = TITLE[i];
-            tabEntity.selectedIcon = mIconSelectIds[i];
-            tabEntity.unSelectedIcon = mIconUnselectIds[i];
-            list.add(tabEntity);
-        }
-        tablayout.setTabData(list);
-        tablayout.setOnSelectorListener(new CommonTabLayout.OnSelectorListener() {
-            @Override
-            public void onSeletor(int position) {
-//                viewPager.setCurrentItem(position);
-            }
-        });
+        
+          ArrayList<TabEntity> list = new ArrayList<>();
+                for (int i = 0; i < TITLE.length; i++) {
+                    TabEntity tabEntity = new TabEntity();
+                    tabEntity.tabTitle = TITLE[i];
+                    tabEntity.selectedIcon = mIconSelectIds[i];
+                    tabEntity.unSelectedIcon = mIconUnselectIds[i];
+                    list.add(tabEntity);
+                }
+                tablayout.setTabData(list);
+                tablayout.setOnSelectorListener(new CommonTabLayout.OnSelectorListener() {
+                    @Override
+                    public void onSeletor(int position) {
+        //                viewPager.setCurrentItem(position);
+                    }
+                });
 
         ArrayList<BaseFragment> fragments = new ArrayList<>();
         fragments.add(BaseFragment.newInstance(this, OneFragment.class));
