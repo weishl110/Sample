@@ -1,4 +1,4 @@
-http://github.com/weishl110/sample/raw/image/1.png
+
 # android tablayout 
 有不足之地，欢迎指点！
 
