@@ -1,6 +1,15 @@
 
 ![image](https://github.com/weishl110/Sample/raw/master/image/3.gif)
 
+依赖配置 
+APP gradle
+        
+        compile 'com.github.weishl110:Sample:1.0.0'
+project gradle
+
+        maven { url 'https://jitpack.io' }
+
+
 # android tablayout 
 有不足之地，欢迎指点！
 
