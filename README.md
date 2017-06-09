@@ -1,5 +1,5 @@
 
-![image]https://github.com/weishl110/Sample/raw/master/image/3.gif
+![image](https://github.com/weishl110/Sample/raw/master/image/3.gif)
 
 # android tablayout 
 有不足之地，欢迎指点！
