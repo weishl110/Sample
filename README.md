@@ -1,9 +1,8 @@
 
+https://github.com/weishl110/Sample/raw/master/image/3.gif
+
 # android tablayout 
 有不足之地，欢迎指点！
-
-https://github.com/weishl110/Sample/raw/master/image/3.gif
-https://github.com/weishl110/Sample/raw/master/image/1.png
 
 可以设置图片，图片的位置 left/top/right/bottom
 图片和文字的选择器，是否显示图片等功能，具体使用方法如下：
